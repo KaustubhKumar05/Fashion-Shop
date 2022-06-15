@@ -13,7 +13,7 @@ const CartProvider = ({ children }) => {
 		{ name: "Socks", price: 20, ID: 7, count: 0 },
 		{ name: "Belt", price: 50, ID: 8, count: 0 },
 		{ name: "Sunglasses", price: 40, ID: 9, count: 0 },
-		{ name: "Sunglasses", price: 40, ID: 9, count: 0 },
+		{ name: "Coat", price: 200, ID: 11, count: 0 },
 	];
 	const [cartItems, setCartItems] = useState([]);
 
