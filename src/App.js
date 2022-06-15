@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import Nav from "./components/Nav";
+import DashBoard from "./components/DashBoard";
+import CheckOut from "./components/CheckOut";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CartProvider from "./contexts/CartContext";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	localStorage.clear();
+	return (
+		<div className="app">
+			<CartProvider>
+				<Router>
+					<Nav />
+					<Routes>
+						<Route exact path="/" element={<DashBoard />} />
+						<Route path="/checkout" element={<CheckOut />} />
+					</Routes>
+				</Router>
+			</CartProvider>
+		</div>
+	);
 }
 
 export default App;
