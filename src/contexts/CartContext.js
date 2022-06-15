@@ -11,6 +11,9 @@ const CartProvider = ({ children }) => {
 		{ name: "Tie", price: 50, ID: 5, count: 0 },
 		{ name: "Shoes", price: 80, ID: 6, count: 0 },
 		{ name: "Socks", price: 20, ID: 7, count: 0 },
+		{ name: "Belt", price: 50, ID: 8, count: 0 },
+		{ name: "Sunglasses", price: 40, ID: 9, count: 0 },
+		{ name: "Sunglasses", price: 40, ID: 9, count: 0 },
 	];
 	const [cartItems, setCartItems] = useState([]);
 
@@ -23,9 +26,6 @@ const CartProvider = ({ children }) => {
 	};
 
 	const removeFromCart = (item) => {
-		// const cartItemsCopy = cartItems.filter(
-		// 	(cartItem) => cartItem.ID !== item.ID
-		// );
 		let cartItemsCopy = [...cartItems];
 		if (item.count === 1) {
 			cartItemsCopy = cartItemsCopy.filter(

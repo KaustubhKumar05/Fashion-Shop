@@ -1,6 +1,6 @@
 $primary-light: #e7c6ff;
 $secondary-light: #c8b6ff;
-$secondary-dark: #9f86c0;
+$secondary-dark: #af99e9;
 $accent-dark: #231942;
 $accent-light: #fff;
 
@@ -20,7 +20,7 @@ a {
 	box-sizing: border-box;
 	min-height: 100vh;
 	overflow-x: hidden;
-	background-color: $primary-light;
+	background-color: $secondary-dark;
 	color: $accent-dark;
 	font-family: Montserrat, sans-serif;
 }
@@ -30,7 +30,7 @@ a {
 	background-color: $secondary-light;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 10px;
+	padding: 0 1.5rem;
 	height: 10vh;
 	font-size: 2rem;
 }
@@ -46,7 +46,7 @@ a {
 	@include fcc;
 	flex-direction: column;
 	position: relative;
-	background-color: $secondary-dark;
+	background-color: $primary-light;
 	color: white;
 	width: clamp(180px, 10%, 220px);
 	border-radius: 5px;
@@ -54,6 +54,7 @@ a {
 	margin: 15px;
 	padding: 5px;
 	cursor: pointer;
+	transition: outline 100ms ease;
 
 	.bottom {
 		box-sizing: border-box;
@@ -76,6 +77,10 @@ a {
 			font-size: 1rem;
 		}
 	}
+
+	&:hover {
+		outline: 10px solid $accent-light;
+	}
 }
 
 .checkout-list {
@@ -85,6 +90,7 @@ a {
 
 .checkout-title {
 	font-size: 2rem;
+	margin: 15px;
 }
 
 .checkout-item {
